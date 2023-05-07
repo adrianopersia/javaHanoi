@@ -5,6 +5,7 @@
 package Vista;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 
@@ -31,6 +32,14 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         TITULO = new javax.swing.JTextArea();
+        Torre1 = new javax.swing.JPanel();
+        ooooo = new javax.swing.JLabel();
+        oooo = new javax.swing.JLabel();
+        ooo = new javax.swing.JLabel();
+        oo = new javax.swing.JLabel();
+        o = new javax.swing.JLabel();
+        Torre2 = new javax.swing.JPanel();
+        Torre3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         MOVERT2 = new javax.swing.JButton();
         MOVERT3 = new javax.swing.JButton();
@@ -44,13 +53,8 @@ public class Menu extends javax.swing.JFrame {
         BG = new javax.swing.JButton();
         BIJ = new javax.swing.JButton();
         BMP = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
         MOVERT8 = new javax.swing.JButton();
+        IniciarButt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -64,6 +68,34 @@ public class Menu extends javax.swing.JFrame {
         TITULO.setBorder(null);
         TITULO.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(TITULO, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 240, 55));
+
+        Torre1.setBackground(new java.awt.Color(0, 153, 153));
+        Torre1.setLayout(new java.awt.GridLayout(5, 1));
+
+        ooooo.setText("ooooo");
+        Torre1.add(ooooo);
+
+        oooo.setText("oooo");
+        Torre1.add(oooo);
+
+        ooo.setText("ooo");
+        Torre1.add(ooo);
+
+        oo.setText("oo");
+        Torre1.add(oo);
+
+        o.setText("o");
+        Torre1.add(o);
+
+        getContentPane().add(Torre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 200, 320));
+
+        Torre2.setBackground(new java.awt.Color(51, 255, 51));
+        Torre2.setLayout(new java.awt.GridLayout(5, 1));
+        getContentPane().add(Torre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, 210, 320));
+
+        Torre3.setBackground(new java.awt.Color(0, 102, 102));
+        Torre3.setLayout(new java.awt.GridLayout(5, 1));
+        getContentPane().add(Torre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 150, 200, 320));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("MOVER A TORRE...");
@@ -100,12 +132,12 @@ public class Menu extends javax.swing.JFrame {
         MOVERT6.setBackground(javax.swing.UIManager.getDefaults().getColor("HelpButton.focusedBorderColor"));
         MOVERT6.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         MOVERT6.setText("1");
-        getContentPane().add(MOVERT6, new org.netbeans.lib.awtextra.AbsoluteConstraints(825, 504, 47, 40));
+        getContentPane().add(MOVERT6, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 500, 47, 40));
 
         MOVERT7.setBackground(javax.swing.UIManager.getDefaults().getColor("HelpButton.focusedBorderColor"));
         MOVERT7.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         MOVERT7.setText("2");
-        getContentPane().add(MOVERT7, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 510, 47, 40));
+        getContentPane().add(MOVERT7, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 500, 47, 40));
 
         BS.setBackground(javax.swing.UIManager.getDefaults().getColor("HelpButton.focusedBorderColor"));
         BS.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -127,124 +159,19 @@ public class Menu extends javax.swing.JFrame {
         BMP.setText("MOSTRAR PUNTOS");
         getContentPane().add(BMP, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 637, 169, 53));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"+"},
-                {"++"},
-                {"+++"}
-            },
-            new String [] {
-                "TORRE 1"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTable1.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
-        jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jTable1.setRowHeight(121);
-        jTable1.setShowHorizontalLines(true);
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-        }
-        jTable1.getAccessibleContext().setAccessibleName("");
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 240, 390));
-
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null},
-                {null},
-                {null}
-            },
-            new String [] {
-                "TORRE 2"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane2.setViewportView(jTable2);
-        if (jTable2.getColumnModel().getColumnCount() > 0) {
-            jTable2.getColumnModel().getColumn(0).setResizable(false);
-        }
-
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, 240, 390));
-
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null},
-                {null},
-                {null}
-            },
-            new String [] {
-                "TORRE 3"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane3.setViewportView(jTable3);
-        if (jTable3.getColumnModel().getColumnCount() > 0) {
-            jTable3.getColumnModel().getColumn(0).setResizable(false);
-        }
-
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 80, 240, 390));
-
         MOVERT8.setBackground(javax.swing.UIManager.getDefaults().getColor("HelpButton.focusedBorderColor"));
         MOVERT8.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         MOVERT8.setText("AGREGAR DISCOS");
         getContentPane().add(MOVERT8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 670, 190, 40));
+
+        IniciarButt.setText("INICIAR");
+        getContentPane().add(IniciarButt, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 660, 80, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
     
-    public JTable getjTable1() {
-        return jTable1;
-    }
-
-    public JTable getjTable2() {
-        return jTable2;
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public JTable getjTable3() {
-        return jTable3;
-    }
 
     public JButton getBG() {
         return BG;
@@ -289,7 +216,44 @@ public class Menu extends javax.swing.JFrame {
     public JButton getMOVERT8() {
         return MOVERT8;
     }
+
+    public JButton getIniciarButt() {
+        return IniciarButt;
+    }
+
+    public JPanel getTorre1() {
+        return Torre1;
+    }
     
+        public JPanel getTorre2() {
+        return Torre2;
+    }
+
+    public JPanel getTorre3() {
+        return Torre3;
+    }
+
+    public JLabel getDisco1() {
+        return o;
+    }
+
+    public JLabel getDisco2() {
+        return oo;
+    }
+
+    public JLabel getDisco3() {
+        return ooo;
+    }
+
+    public JLabel getDisco4() {
+        return oooo;
+    }
+
+    public JLabel getDisco5() {
+        return ooooo;
+    }
+
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -297,6 +261,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton BIJ;
     private javax.swing.JButton BMP;
     private javax.swing.JButton BS;
+    private javax.swing.JButton IniciarButt;
     private javax.swing.JButton MOVERT2;
     private javax.swing.JButton MOVERT3;
     private javax.swing.JButton MOVERT4;
@@ -305,15 +270,17 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton MOVERT7;
     private javax.swing.JButton MOVERT8;
     private javax.swing.JTextArea TITULO;
+    private javax.swing.JPanel Torre1;
+    private javax.swing.JPanel Torre2;
+    private javax.swing.JPanel Torre3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
+    private javax.swing.JLabel o;
+    private javax.swing.JLabel oo;
+    private javax.swing.JLabel ooo;
+    private javax.swing.JLabel oooo;
+    private javax.swing.JLabel ooooo;
     // End of variables declaration//GEN-END:variables
 
 }
